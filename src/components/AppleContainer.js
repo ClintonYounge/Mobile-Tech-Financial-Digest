@@ -10,7 +10,7 @@ const Apple = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredData, setFilteredData] = useState([]);
-  const [resultCount, setResultCount] = useState(0); // New state for result count
+  const [resultCount, setResultCount] = useState(0);
 
   useEffect(() => {
     if (apple.length === 0) {

@@ -56,6 +56,7 @@
 - Redux store
 - Fetch Data from API
 - Render fetched API data.
+- Search feature
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
