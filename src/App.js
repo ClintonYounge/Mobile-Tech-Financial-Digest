@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import Apple from './components/Apple';
-import Samsung from './components/Samsung';
-import Xiaomi from './components/Xiaomi';
-import Google from './components/Google';
+import AppleContainer from './components/AppleContainer';
+import SamsungContainer from './components/SamsungContainer';
+import XiaomiContainer from './components/XiaomiContainer';
+import GoogleContainer from './components/GoogleContainer';
 import Home from './components/Home';
 
 function App() {
@@ -10,10 +10,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/apple" element={<Apple />} />
-        <Route path="/samsung" element={<Samsung />} />
-        <Route path="/xiaomi" element={<Xiaomi />} />
-        <Route path="/google" element={<Google />} />
+        <Route path="/apple" element={<AppleContainer />} />
+        <Route path="/samsung" element={<SamsungContainer />} />
+        <Route path="/xiaomi" element={<XiaomiContainer />} />
+        <Route path="/google" element={<GoogleContainer />} />
       </Routes>
     </>
   );

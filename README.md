@@ -55,6 +55,7 @@
 - Folder structure
 - Redux store
 - Fetch Data from API
+- Render fetched API data.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -101,7 +102,6 @@ Run the `npm install` command in your console to install all necessary dependenc
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Better UX (functionality)
-- Rendered data from API
 - Styled User Interface
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
