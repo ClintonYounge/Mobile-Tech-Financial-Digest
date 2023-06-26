@@ -54,6 +54,7 @@
 
 - Folder structure
 - Redux store
+- Fetch Data from API
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

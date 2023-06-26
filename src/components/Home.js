@@ -6,7 +6,7 @@ const Home = () => (
       Hello! This is Mobile Tech Financial Digest.
     </h1>
     <p>
-      We `&apos` ll be taking a look at some companies that have a large presence
+      We&apos;ll be taking a look at some companies that have a large presence
       in the smartphone manufacturing market and their numbers.
       Note that all these companies are on public stock exchanges and are ordered randomly.
     </p>
