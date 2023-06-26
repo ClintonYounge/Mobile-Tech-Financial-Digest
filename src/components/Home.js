@@ -12,8 +12,9 @@ const Home = () => (
     </p>
     <p>
       Below lies a list of companies to choose from.
-      Select one to see their number for the last 5 years.
+      Select one to see their number for up to the last 5 years.
     </p>
+    <p>(4) Companies Found</p>
     <PageLinks />
   </>
 );

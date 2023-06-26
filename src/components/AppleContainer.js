@@ -1,19 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-
 import { fetchAppleData } from '../redux/apple/appleSlice';
 import DataHandler from './DataHandler';
+import Header from './Header';
 
-const AppleContainer = () => {
+const Apple = () => {
   const { apple, isLoading, error } = useSelector((state) => state.apple);
   const dispatch = useDispatch();
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredData, setFilteredData] = useState([]);
+  const [resultCount, setResultCount] = useState(0); // New state for result count
 
   useEffect(() => {
     if (apple.length === 0) {
       dispatch(fetchAppleData());
     }
   }, [dispatch, apple]);
+
+  useEffect(() => {
+    if (searchQuery !== '') {
+      const filtered = apple.filter(
+        (data) => data.calendarYear.toString().includes(searchQuery),
+      );
+      setFilteredData(filtered);
+      setResultCount(filtered.length);
+    } else {
+      setFilteredData(apple);
+      setResultCount(apple.length);
+    }
+  }, [searchQuery, apple]);
+
+  const handleSearch = () => {
+    setIsSearchVisible(true);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -25,8 +49,23 @@ const AppleContainer = () => {
 
   return (
     <>
-      <Link to="/">Go Home</Link>
-      {apple.map((data) => (
+      <Header handleSearch={handleSearch} />
+      {isSearchVisible && (
+        <div>
+          <input
+            type="text"
+            placeholder="Search by year..."
+            value={searchQuery}
+            onChange={handleSearchChange}
+          />
+        </div>
+      )}
+      <p>
+        Previous Years Available:
+        {' '}
+        {resultCount}
+      </p>
+      {filteredData.map((data) => (
         <DataHandler
           reportedCurrency={data.reportedCurrency}
           key={data.date}
@@ -47,4 +86,4 @@ const AppleContainer = () => {
   );
 };
 
-export default AppleContainer;
+export default Apple;
