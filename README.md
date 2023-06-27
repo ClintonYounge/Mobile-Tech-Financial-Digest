@@ -73,7 +73,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link coming up]()
+- [Live Demo Link](https://mobile-tech-financial-digest.onrender.com/)
 
 - Below is a link to my video presentation of the project.
 [Video presentation in the works]
