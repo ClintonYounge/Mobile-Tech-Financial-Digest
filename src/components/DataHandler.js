@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../styles/DataHandler.css';
 
 const DataHandler = ({
   calendarYear, revenue, costOfRevenue, grossProfit,
@@ -7,68 +8,68 @@ const DataHandler = ({
   netIncome, netIncomeRatio, link, reportedCurrency,
 }) => (
   <div className="data-container">
-    <li>
+    <li className="data">
       Reported Currency:
     </li>
-    <li>
+    <li className="data">
       {reportedCurrency}
     </li>
-    <li>
+    <li className="data">
       Calendar Year:
     </li>
-    <li>
+    <li className="data">
       {calendarYear}
     </li>
-    <li>
+    <li className="data">
       Revenue:
     </li>
-    <li>
+    <li className="data">
       {' $'}
       {revenue.toLocaleString()}
     </li>
-    <li>
+    <li className="data">
       Cost of Revenue:
       {' $'}
       {costOfRevenue.toLocaleString()}
     </li>
-    <li>
+    <li className="data">
       Gross Profit:
       {' $'}
       {grossProfit.toLocaleString()}
     </li>
-    <li>
+    <li className="data">
       Research and Development Expenses:
       {' $'}
       {researchAndDevelopmentExpenses.toLocaleString()}
     </li>
-    <li>
+    <li className="data">
       Operating Expenses:
       {' $'}
       {operatingExpenses.toLocaleString()}
     </li>
-    <li>
+    <li className="data">
       Cost and Expenses:
       {' $'}
       {costAndExpenses.toLocaleString()}
     </li>
-    <li>
+    <li className="data">
       Income Before Tax:
       {' $'}
       {incomeBeforeTax.toLocaleString()}
     </li>
-    <li>
+    <li className="data">
       Net Income:
       {' $'}
       {netIncome.toLocaleString()}
     </li>
-    <li>
+    <li className="data">
       Net Income Ratio:
       {' $'}
       {netIncomeRatio.toLocaleString()}
     </li>
     {link ? (
-      <li>
-        <a href={link}>
+      <li className="link click-here">
+        <a href={link} className="link-to-more">
           Click here for complete financial data.
         </a>
       </li>
