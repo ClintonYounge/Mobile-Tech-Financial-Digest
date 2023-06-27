@@ -1,7 +1,9 @@
 import PageLinks from './PageLinks';
+import Header from './Header';
 
 const Home = () => (
   <>
+    <Header />
     <h1>
       Hello! This is Mobile Tech Financial Digest.
     </h1>
