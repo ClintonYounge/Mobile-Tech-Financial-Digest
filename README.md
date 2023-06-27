@@ -113,7 +113,7 @@ Run the `npm install` command in your console to install all necessary dependenc
 
 To run tests, run the following command:
 
-Run the `npx run test` command in your console to run the tests.
+Run the `npm run test` command in your console to run the tests.
 
 ## 👥 Authors <a name="authors"></a>
 
