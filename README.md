@@ -21,7 +21,7 @@
 # 📖 [Mobile Tech Financial Digest] <a name="about-project"></a>
 
 
-**[Mobile Tech Financial Digest]** is a react redux project which allows users to go through financial data of Apple, Samsung, Xiaomi and Googlet by interacting.
+**[Mobile Tech Financial Digest]** is a react redux project which allows users to go through financial data of Apple, Samsung, Xiaomi and Google by interacting.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -52,11 +52,11 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Folder structure
 - Redux store
 - Fetch Data from API
 - Render fetched API data.
 - Search feature
+- Interactive UI
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -102,8 +102,7 @@ Run the `npm install` command in your console to install all necessary dependenc
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Better UX (functionality)
-- Styled User Interface
+- Light mode / Dark mode / Color mode / Random gradient mode
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,7 +122,7 @@ If you like this project feel free to leave a star to show your support.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to give thanks to Microverse for equipping me with all the necessary information needed to complete this project. As well as for providing an environment that makes me strive to grow as a developer.
+I would like to give thanks to Microverse for providing an environment that makes me strive to grow as a developer.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
