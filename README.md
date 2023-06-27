@@ -93,11 +93,11 @@ In order to run this project you need to:
 
 Clone this repository to your desired folder:
 
-`git clone git remote add origin https://github.com/ClintonYounge/`
+`git clone git remote add origin https://github.com/ClintonYounge/Mobile-Tech-Financial-Digest`
 
 or
 
-`git clone git remote add origin https://github.com/ClintonYounge/` <-- _Only if you have [SSH keys configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) on your GitHub account_.
+`git clone git remote add origin https://github.com/ClintonYounge/Mobile-Tech-Financial-Digest` <-- _Only if you have [SSH keys configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) on your GitHub account_.
 
 or
 
