@@ -6,61 +6,65 @@ const DataHandler = ({
   costAndExpenses, incomeBeforeTax,
   netIncome, netIncomeRatio, link, reportedCurrency,
 }) => (
-  <ul>
+  <div className="data-container">
     <li>
       Reported Currency:
-      {' '}
+    </li>
+    <li>
       {reportedCurrency}
     </li>
     <li>
       Calendar Year:
-      {' '}
+    </li>
+    <li>
       {calendarYear}
     </li>
     <li>
       Revenue:
-      {' '}
-      {revenue}
+    </li>
+    <li>
+      {' $'}
+      {revenue.toLocaleString()}
     </li>
     <li>
       Cost of Revenue:
-      {' '}
-      {costOfRevenue}
+      {' $'}
+      {costOfRevenue.toLocaleString()}
     </li>
     <li>
       Gross Profit:
-      {' '}
-      {grossProfit}
+      {' $'}
+      {grossProfit.toLocaleString()}
     </li>
     <li>
       Research and Development Expenses:
-      {' '}
-      {researchAndDevelopmentExpenses}
+      {' $'}
+      {researchAndDevelopmentExpenses.toLocaleString()}
     </li>
     <li>
       Operating Expenses:
-      {' '}
-      {operatingExpenses}
+      {' $'}
+      {operatingExpenses.toLocaleString()}
     </li>
     <li>
       Cost and Expenses:
-      {' '}
-      {costAndExpenses}
+      {' $'}
+      {costAndExpenses.toLocaleString()}
     </li>
     <li>
       Income Before Tax:
-      {' '}
-      {incomeBeforeTax}
+      {' $'}
+      {incomeBeforeTax.toLocaleString()}
     </li>
     <li>
       Net Income:
-      {' '}
-      {netIncome}
+      {' $'}
+      {netIncome.toLocaleString()}
     </li>
     <li>
       Net Income Ratio:
-      {' '}
-      {netIncomeRatio}
+      {' $'}
+      {netIncomeRatio.toLocaleString()}
     </li>
     {link ? (
       <li>
@@ -69,7 +73,7 @@ const DataHandler = ({
         </a>
       </li>
     ) : null}
-  </ul>
+  </div>
 );
 
 DataHandler.propTypes = {

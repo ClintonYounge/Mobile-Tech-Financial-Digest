@@ -1,12 +1,8 @@
-* {
-  box-sizing: border-box;
-  list-style: none;
-}
-
 .header-nav {
-  background-color: rgb(119, 64, 246);
+  background-color: rgb(61, 59, 67);
   height: 70px;
   display: flex;
+  color: white;
 }
 
 .navlinks {
@@ -30,7 +26,6 @@
 
 .navlink3 {
   width: 17%;
-  font-family: cursive;
 }
 
 .navlink4 {
@@ -41,4 +36,5 @@
 .Fa-home,
 .Fa-search {
   scale: 1.5;
+  color: white;
 }

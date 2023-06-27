@@ -10,6 +10,7 @@ const Xiaomi = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredData, setFilteredData] = useState([]);
+  const [resultCount, setResultCount] = useState(0);
 
   useEffect(() => {
     if (xiaomi.length === 0) {
@@ -23,8 +24,10 @@ const Xiaomi = () => {
         (data) => data.calendarYear.toString().includes(searchQuery),
       );
       setFilteredData(filtered);
+      setResultCount(filtered.length);
     } else {
       setFilteredData(xiaomi);
+      setResultCount(xiaomi.length);
     }
   }, [searchQuery, xiaomi]);
 
@@ -57,6 +60,11 @@ const Xiaomi = () => {
           />
         </div>
       )}
+      <p className="prev-available">
+        Previous Years Available:
+        {' '}
+        {resultCount}
+      </p>
       {filteredData.map((data) => (
         <DataHandler
           reportedCurrency={data.reportedCurrency}

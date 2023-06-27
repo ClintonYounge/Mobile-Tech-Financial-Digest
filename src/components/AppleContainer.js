@@ -60,7 +60,7 @@ const Apple = () => {
           />
         </div>
       )}
-      <p>
+      <p className="prev-available">
         Previous Years Available:
         {' '}
         {resultCount}
