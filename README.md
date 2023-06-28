@@ -34,7 +34,7 @@
 **[Mobile Tech Financial Digest]** is a react redux project which allows users to go through financial data of Apple, Samsung, Xiaomi and Google by interacting.
 
 - Below is a link to my video presentation of the project.
-[Video presentation in the works]
+[Video presentation in the works](https://www.loom.com/share/2e8579c6f7f940aeb2539baae30319c5?sid=ccc68d53-49cd-4c1c-8b60-dee9635c53a9)
 
 ## 🛠 Built With <a name="built-with"></a>
 
