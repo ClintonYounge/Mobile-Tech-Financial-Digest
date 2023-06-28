@@ -1,22 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchGoogleData } from '../redux/google/googleSlice';
+import { useSelector } from 'react-redux';
 import DataHandler from './DataHandler';
 import Header from './Header';
 
 const Google = () => {
   const { google, isLoading, error } = useSelector((state) => state.google);
-  const dispatch = useDispatch();
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredData, setFilteredData] = useState([]);
   const [resultCount, setResultCount] = useState(0);
-
-  useEffect(() => {
-    if (google.length === 0) {
-      dispatch(fetchGoogleData());
-    }
-  }, [dispatch, google]);
 
   useEffect(() => {
     if (searchQuery !== '') {

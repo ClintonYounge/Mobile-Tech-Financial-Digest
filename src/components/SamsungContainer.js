@@ -1,22 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchSamsungData } from '../redux/samsung/samsungSlice';
+import { useSelector } from 'react-redux';
 import DataHandler from './DataHandler';
 import Header from './Header';
 
 const Samsung = () => {
   const { samsung, isLoading, error } = useSelector((state) => state.samsung);
-  const dispatch = useDispatch();
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredData, setFilteredData] = useState([]);
   const [resultCount, setResultCount] = useState(0);
-
-  useEffect(() => {
-    if (samsung.length === 0) {
-      dispatch(fetchSamsungData());
-    }
-  }, [dispatch, samsung]);
 
   useEffect(() => {
     if (searchQuery !== '') {

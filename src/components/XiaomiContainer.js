@@ -1,22 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchXiaomiData } from '../redux/xiaomi/xiaomiSlice';
+import { useSelector } from 'react-redux';
 import DataHandler from './DataHandler';
 import Header from './Header';
 
 const Xiaomi = () => {
   const { xiaomi, isLoading, error } = useSelector((state) => state.xiaomi);
-  const dispatch = useDispatch();
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredData, setFilteredData] = useState([]);
   const [resultCount, setResultCount] = useState(0);
-
-  useEffect(() => {
-    if (xiaomi.length === 0) {
-      dispatch(fetchXiaomiData());
-    }
-  }, [dispatch, xiaomi]);
 
   useEffect(() => {
     if (searchQuery !== '') {
