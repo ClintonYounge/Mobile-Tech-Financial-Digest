@@ -1,0 +1,43 @@
+* {
+  text-decoration: none;
+}
+
+.landing {
+  background-color: white;
+  padding: 10px 20px 15px 20px;
+  color: rgb(61, 59, 67);
+}
+
+.companies {
+  background-color: rgb(61, 59, 67);
+  color: rgb(61, 59, 67);
+  padding-top: 1px;
+}
+
+.companies-found {
+  color: white;
+  text-align: center;
+}
+
+.page-links {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.company-name {
+  margin-bottom: 20px;
+}
+
+.page-link {
+  width: 100%;
+  background-color: white;
+  padding: 0 18px;
+  border: 0.5px solid rgb(61, 59, 67);
+}
+
+.company-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}

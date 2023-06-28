@@ -1,0 +1,40 @@
+.header-nav {
+  background-color: rgb(61, 59, 67);
+  height: 70px;
+  display: flex;
+  color: white;
+}
+
+.navlinks {
+  width: 95%;
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+}
+
+.navlink1 {
+  width: 35%;
+}
+
+.navlink2 {
+  width: 13%;
+}
+
+.navlink3 {
+  width: 17%;
+}
+
+.navlink4 {
+  width: 35%;
+  text-align: end;
+}
+
+.Fa-home,
+.Fa-search {
+  scale: 1.5;
+  color: white;
+}

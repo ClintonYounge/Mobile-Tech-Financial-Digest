@@ -1,0 +1,44 @@
+.prev-available {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  background-color: whitesmoke;
+}
+
+.data-container {
+  margin: 0 5%;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 20px;
+  color: rgb(65, 61, 61);
+  background-color: white;
+  border-radius: 20px;
+  border: 5px solid rgb(65, 61, 64);
+}
+
+.data {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(65, 61, 61);
+}
+
+.link {
+  width: 201%;
+  text-align: center;
+  border-radius: 0;
+}
+
+.link-to-more {
+  width: 195%;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: rgb(65, 61, 61);
+  color: white;
+}
+
+.click-here {
+  padding: 10px;
+}
