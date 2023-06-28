@@ -1,27 +1,35 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchXiaomiData } from '../redux/xiaomi/xiaomiSlice';
 import DataHandler from './DataHandler';
 import Header from './Header';
 
-const Samsung = () => {
-  const { samsung, isLoading, error } = useSelector((state) => state.samsung);
+const Xiaomi = () => {
+  const { xiaomi, isLoading, error } = useSelector((state) => state.xiaomi);
+  const dispatch = useDispatch();
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredData, setFilteredData] = useState([]);
   const [resultCount, setResultCount] = useState(0);
 
   useEffect(() => {
+    if (xiaomi.length === 0) {
+      dispatch(fetchXiaomiData());
+    }
+  }, [dispatch, xiaomi]);
+
+  useEffect(() => {
     if (searchQuery !== '') {
-      const filtered = samsung.filter(
+      const filtered = xiaomi.filter(
         (data) => data.calendarYear.toString().includes(searchQuery),
       );
       setFilteredData(filtered);
       setResultCount(filtered.length);
     } else {
-      setFilteredData(samsung);
-      setResultCount(samsung.length);
+      setFilteredData(xiaomi);
+      setResultCount(xiaomi.length);
     }
-  }, [searchQuery, samsung]);
+  }, [searchQuery, xiaomi]);
 
   const handleSearch = () => {
     setIsSearchVisible(true);
@@ -43,14 +51,14 @@ const Samsung = () => {
     <>
       <Header handleSearch={handleSearch} />
       {isSearchVisible && (
-        <div>
-          <input
-            type="text"
-            placeholder="Search by year..."
-            value={searchQuery}
-            onChange={handleSearchChange}
-          />
-        </div>
+      <div>
+        <input
+          type="text"
+          placeholder="Search by year..."
+          value={searchQuery}
+          onChange={handleSearchChange}
+        />
+      </div>
       )}
       <p className="prev-available">
         Previous Years Available:
@@ -78,4 +86,4 @@ const Samsung = () => {
   );
 };
 
-export default Samsung;
+export default Xiaomi;
