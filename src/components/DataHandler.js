@@ -79,7 +79,7 @@ const DataHandler = ({
 
 DataHandler.propTypes = {
   reportedCurrency: PropTypes.string.isRequired,
-  calendarYear: PropTypes.number.isRequired,
+  calendarYear: PropTypes.string.isRequired,
   revenue: PropTypes.number.isRequired,
   costOfRevenue: PropTypes.number.isRequired,
   grossProfit: PropTypes.number.isRequired,

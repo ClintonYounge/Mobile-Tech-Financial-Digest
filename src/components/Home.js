@@ -1,16 +1,57 @@
-import { useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { FaSearch } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
 import PageLinks from './PageLinks';
 import Header from './Header';
 import '../styles/HomePage.css';
 
 const Home = () => {
-  const { apple } = useSelector((state) => state.apple);
-  const { samsung } = useSelector((state) => state.samsung);
-  const { xiaomi } = useSelector((state) => state.xiaomi);
-  const { google } = useSelector((state) => state.google);
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredData, setFilteredData] = useState('');
+
+  const appleTicker = 'Apple';
+  const samsungTicker = 'Samsung';
+  const xiaomiTicker = 'Xiaomi';
+  const googleTicker = 'Google';
+  const appleCompany = 'apple';
+  const samsungCompany = 'samsung';
+  const xiaomiCompany = 'xiaomi';
+  const googleCompany = 'google';
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const categoryArray = [
+      appleTicker,
+      appleCompany,
+      samsungTicker,
+      samsungCompany,
+      xiaomiTicker,
+      xiaomiCompany,
+      googleTicker,
+      googleCompany,
+    ];
+
+    if (searchQuery !== '') {
+      const filtered = categoryArray.filter(
+        (data) => data.includes(searchQuery),
+      );
+      setFilteredData(filtered);
+    }
+  }, [appleTicker, googleTicker, samsungTicker, searchQuery, xiaomiTicker]);
+
+  const handleCompanySearch = () => {
+    setIsSearchVisible(true);
+  };
+
+  const handleCompanySearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
   return (
     <>
-      <Header />
+      <Header handleCompanySearch={handleCompanySearch} />
       <main className="home-container">
         <div className="landing">
           <h1>
@@ -27,8 +68,30 @@ const Home = () => {
           </p>
         </div>
         <div className="companies">
-          <p className="companies-found">(4) Companies available</p>
-          <PageLinks apple={apple[0]} xiaomi={xiaomi[0]} google={google[0]} samsung={samsung[0]} />
+          <div className="company-search">
+            <p className="companies-found">Companies available</p>
+            {location.pathname === '/' && (
+            <FaSearch className="Fa-search" onClick={handleCompanySearch} />
+            )}
+          </div>
+
+          {isSearchVisible && (
+          <div>
+            <input
+              type="text"
+              placeholder="Search by company name..."
+              value={searchQuery}
+              onChange={handleCompanySearchChange}
+            />
+          </div>
+          )}
+          <PageLinks
+            filteredData={filteredData}
+            apple={appleTicker}
+            xiaomi={xiaomiTicker}
+            google={googleTicker}
+            samsung={samsungTicker}
+          />
         </div>
       </main>
     </>

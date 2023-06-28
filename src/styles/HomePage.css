@@ -21,7 +21,7 @@
 
 .page-links {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
 }
 
 .company-name {
@@ -33,4 +33,11 @@
   background-color: white;
   padding: 0 18px;
   border: 0.5px solid rgb(61, 59, 67);
+}
+
+.company-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
