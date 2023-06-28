@@ -71,7 +71,8 @@ Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwad
 - Fetch Data from API.
 - Render fetched API data.
 - Navigation by routing.
-- Search feature.
+- Search feature on Home page.
+- Search feature on details page.
 - Interactive UI.
 - Tests.
 
