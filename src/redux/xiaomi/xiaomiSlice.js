@@ -6,7 +6,7 @@ const initialState = {
   error: undefined,
 };
 
-const url = 'https://financialmodelingprep.com/api/v3/income-statement/XIACF?limit=120&apikey=095953458cee77b4d4e567e4e4769368';
+const url = 'https://financialmodelingprep.com/api/v3/income-statement/XIACF?limit=120&apikey=11805f8fd368addce68a7b4f772c3a6c';
 
 export const fetchXiaomiData = createAsyncThunk('xiaomi/fetchXiaomiData', async () => {
   try {
