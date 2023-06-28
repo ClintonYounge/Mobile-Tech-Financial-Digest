@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FaHome, FaSearch } from 'react-icons/fa';
+import { FaArrowLeft, FaSearch } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/Header.css';
 import logoImg from '../images/logo.png';
@@ -16,7 +16,7 @@ const Header = ({ handleSearch }) => {
             <li className="navlink1">
               {location.pathname !== '/' && (
                 <Link to="/">
-                  <FaHome className="Fa-home" />
+                  <FaArrowLeft className="Fa-home" />
                 </Link>
               )}
             </li>
